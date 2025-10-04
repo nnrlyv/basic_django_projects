@@ -1,0 +1,12 @@
+<h2>Here you can add new question if you want!</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="question_text">
+    <button type="submit">Send</button>
+</form>
+
+<p><a href="{% url 'polls:index' %}">Back to list</a></p>
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'polls/style.css' %}">

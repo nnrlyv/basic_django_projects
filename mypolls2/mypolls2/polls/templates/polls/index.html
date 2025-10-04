@@ -1,0 +1,15 @@
+<h1>Список вопросов</h1>
+<ul>
+{% for question in latest_questions %}
+  <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+{% empty %}
+  <li>Нет доступных вопросов.</li>
+{% endfor %}
+</ul>
+
+<div style="text-align:center; margin-top:20px;">
+  <a href="{% url 'polls:add_question' %}" class="btn">+ Add question</a>
+</div>
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'polls/style.css' %}">

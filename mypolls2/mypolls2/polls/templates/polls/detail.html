@@ -1,0 +1,26 @@
+<h1>{{ question.question_text }}</h1>
+<p><strong>Просмотров:</strong> {{ question.views_count }}</p>
+<p><strong>Description:</strong> {{question.description}} </p>
+
+
+{% if error_message %}
+  <p style="color:red">{{ error_message }}</p>
+{% endif %}
+
+<form action="{% url 'polls:vote' question.id %}" method="post">
+  {% csrf_token %}
+  {% for choice in question.choice_set.all %}
+    <label>
+      <input type="radio" name="choice" value="{{ choice.id }}">
+      {{ choice.choice_text }}
+    </label><br>
+  {% endfor %}
+  <button type="submit">Голосовать</button>
+</form>
+
+<div style="text-align:left; margin-top:20px;">
+  <a href="{% url 'polls:index' %}" class="btn">Back to list</a>
+</div>
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'polls/style.css' %}">
