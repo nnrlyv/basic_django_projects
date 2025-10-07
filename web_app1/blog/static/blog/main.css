@@ -1,0 +1,103 @@
+body {
+  background: #f4f6f9;
+  color: #2c2c2c;
+  margin-top: 5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h5, h6 {
+  color: #3b3b3b;
+}
+
+/* Навигация */
+.bg-steel {
+  background: linear-gradient(90deg, #323b73, #8f94fb);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #e0e6ff;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.site-header .navbar-nav .nav-link.active {
+  color: #ffffff;
+  font-weight: 600;
+  border-bottom: 2px solid #ffffff;
+}
+
+/* Основной контент */
+.content-section {
+  background: #ffffff;
+  padding: 20px 25px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Статьи */
+.article-title {
+  color: #333333;
+  transition: color 0.3s;
+}
+
+a.article-title:hover {
+  color: rgba(106, 17, 203, 0.63);
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+  line-height: 1.6;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #6a11cb;
+}
+
+.article-metadata {
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+.article-metadata a:hover {
+  color: #874ec8;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+/* Профиль пользователя */
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  border: 3px solid #8f94fb;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+  color: #4ec858;
+}
